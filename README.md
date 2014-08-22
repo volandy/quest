@@ -18,7 +18,7 @@
     end
     end
  
-def moustach_room
+    def moustach_room
     puts "В комнате усатое чудовище."
     puts "У чудовища много власти."
     puts "Чудовище заставляет вас меньше курить."
@@ -42,9 +42,9 @@ def moustach_room
 	      puts "Пиши пиши, только по английски пиши"
 	    end
     end
-end
+    end
 	
-def cthulhu_room
+    def cthulhu_room
     puts "Here you see the great evil Cthulhu."
     puts "He, it, whatever stares at you and you go insane."
     puts "Do you flee for your life or eat your head?"
@@ -58,14 +58,14 @@ def cthulhu_room
 	else 
 	  cthulhu_room
 	end
-end
+  end
 	 
-def dead(why)
+  def dead(why)
   puts why, "Good job!"
   exit(0)
-end
+  end
 	
-def start
+  def start
     puts "Вы пришли на работу."
     puts "Вам хочется поскорее зарплату. Вам нужно поискать Аллу по кабинетам"
     puts "В какой кабинет вы хотите пойти?(201, 402, 408)"
@@ -82,6 +82,6 @@ def start
 	else 
 	  dead("Вы слишком долго бродили по кабинетам. Вас заметили и уволили")
 	end
-end
+  end
 	 
-start
+  start
