@@ -1,34 +1,30 @@
-quest
-=====
-
-PLS
 def gold_room
-  puts "This room is full of gold. How much do you take?"
+    puts "This room is full of gold. How much do you take?"
   
-  print "> "
-  choice = $stdin.gets.chomp
+    print "> "
+    choice = $stdin.gets.chomp
   
-  #this line has a bug, so fix it
-  if choice =~/0/ || choice =~/1/
+    #this line has a bug, so fix it
+    if choice =~/0/ || choice =~/1/
     how_much = choice.to_i
-  else
-    dead("Man, learn to type a number.")
-  end
+    else
+      dead("Man, learn to type a number.")
+    end
   
-  if how_much < 50
-    puts "Nice, you're not greedy, you win!"
-	exit(0)
-  else 
-    dead("You greedy bastard!")
-  end
+    if how_much < 50
+      puts "Nice, you're not greedy, you win!"
+	  exit(0)
+    else 
+      dead("You greedy bastard!")
+    end
 end
  
 def moustach_room
-  puts "В комнате усатое чудовище."
-  puts "У чудовища много власти."
-  puts "Чудовище заставляет вас меньше курить."
-  puts "Что вы хотите сделать с чудовищем?"
-  bear_moved = false
+    puts "В комнате усатое чудовище."
+    puts "У чудовища много власти."
+    puts "Чудовище заставляет вас меньше курить."
+    puts "Что вы хотите сделать с чудовищем?"
+    bear_moved = false
 	
     while true
 	  print "> "
@@ -50,12 +46,12 @@ def moustach_room
 end
 	
 def cthulhu_room
-  puts "Here you see the great evil Cthulhu."
-  puts "He, it, whatever stares at you and you go insane."
-  puts "Do you flee for your life or eat your head?"
+    puts "Here you see the great evil Cthulhu."
+    puts "He, it, whatever stares at you and you go insane."
+    puts "Do you flee for your life or eat your head?"
 	  
-  print "> "
-  choice = $stdin.gets.chomp
+    print "> "
+    choice = $stdin.gets.chomp
 	if choice.include? "flee"
 	  start
 	elsif (choice.include? "head")
@@ -71,12 +67,12 @@ def dead(why)
 end
 	
 def start
-  puts "Вы пришли на работу."
-  puts "Вам хочется поскорее зарплату. Вам нужно поискать Аллу по кабинетам"
-  puts "В какой кабинет вы хотите пойти?(201, 402, 408)"
+    puts "Вы пришли на работу."
+    puts "Вам хочется поскорее зарплату. Вам нужно поискать Аллу по кабинетам"
+    puts "В какой кабинет вы хотите пойти?(201, 402, 408)"
 	  
-  print"> "
-  choice = $stdin.gets.chomp
+    print"> "
+    choice = $stdin.gets.chomp
 	  
 	if choice == "201"
 	  moustach_room
