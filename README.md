@@ -58,14 +58,14 @@
 	else 
 	  cthulhu_room
 	end
-  end
+   end
 	 
-  def dead(why)
-  puts why, "Good job!"
-  exit(0)
-  end
+   def dead(why)
+   puts why, "Good job!"
+   exit(0)
+   end
 	
-  def start
+   def start
     puts "Вы пришли на работу."
     puts "Вам хочется поскорее зарплату. Вам нужно поискать Аллу по кабинетам"
     puts "В какой кабинет вы хотите пойти?(201, 402, 408)"
@@ -82,6 +82,6 @@
 	else 
 	  dead("Вы слишком долго бродили по кабинетам. Вас заметили и уволили")
 	end
-  end
+   end
 	 
-  start
+   start
