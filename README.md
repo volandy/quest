@@ -1,16 +1,13 @@
     def gold_room
       puts "This room is full of gold. How much do you take?"
     print "> "
-    
     choice = $stdin.gets.chomp
-    #this line has a bug, so fix it
       if choice =~/0/ || choice =~/1/
         how_much = choice.to_i
       else
         dead("Man, learn to type a number.")
-    end
-    
-      if how_much < 50
+      end
+    if how_much < 50
       puts "Nice, you're not greedy, you win!"
 	  exit(0)
     else 
@@ -21,7 +18,7 @@
     def moustach_room
     puts "В комнате усатое чудовище."
     puts "У чудовища много власти."
-    puts "Чудовище заставляет вас меньше курить."
+    puts "Чудовище заставляет вас сделать норму."
     puts "Что вы хотите сделать с чудовищем?"
     bear_moved = false
 	
@@ -29,7 +26,7 @@
 	  print "> "
 	  choice = $stdin.gets.chomp
 	  
-	    if choice == "take honey"
+	    if choice == "kick moustache"
 	      dead("The bear looks at you then slaps your face off.")
 	    elsif choice == "taunt bear" && !bear_moved
 	      puts "The bear has moved from the door. You can go through it now."
