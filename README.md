@@ -41,7 +41,7 @@
     end
     end
 	
-    def cthulhu_room
+    def leprekon_room
     puts "Here you see the great evil Cthulhu."
     puts "He, it, whatever stares at you and you go insane."
     puts "Do you flee for your life or eat your head?"
@@ -55,6 +55,9 @@
 	else 
 	  cthulhu_room
 	end
+    end
+    
+    def nose_room
     end
 	 
     def dead(why)
@@ -75,7 +78,7 @@
 	elsif choice == "402"
 	  leprekon_room
 	elsif choice == "408"
-	  hr_room
+	  nose_room
 	else 
 	  dead("Вы слишком долго бродили по кабинетам. Вас заметили и уволили")
 	end
