@@ -20,16 +20,19 @@
     puts "У чудовища много власти."
     puts "Чудовище заставляет вас сделать норму."
     puts "Что вы хотите сделать с чудовищем?"
-    bear_moved = false
+    puts "Дать по усам(1)"
+    puts "Попросить повышение(2)"
+    puts "Отработать норму(3)"
+    pen_gained = false
 	
     while true
 	  print "> "
 	  choice = $stdin.gets.chomp
 	  
-	    if choice == "kick moustache"
-	      dead("The bear looks at you then slaps your face off.")
-	    elsif choice == "taunt bear" && !bear_moved
-	      puts "The bear has moved from the door. You can go through it now."
+	    if choice == "1"
+	      dead("Вас уволили за неуважительное отношение к менеджменту.")
+	    elsif choice == "2"  
+	      puts "Вам дали подписать ворнинг"
 	      bear_moved = true
 	    elsif choice == "taunt bear" && bear_moved
 	      dead("The bear get pissed off and chews your leg off.")
@@ -42,8 +45,8 @@
     end
 	
     def leprekon_room
-    puts "Here you see the great evil Cthulhu."
-    puts "He, it, whatever stares at you and you go insane."
+    puts "Вы видите лепрекона сидящего на горшке с золотом."
+    puts "Он не тратит золото а только копит его."
     puts "Do you flee for your life or eat your head?"
 	  
     print "> "
@@ -61,13 +64,13 @@
     end
 	 
     def dead(why)
-    puts why, "Good job!"
+    puts why, "Конец!"
     exit(0)
     end
 	
     def start
     puts "Вы пришли на работу."
-    puts "Вам хочется поскорее зарплату. Вам нужно поискать Аллу по кабинетам"
+    puts "Вам хочется поскорее зарплату. Вам нужно найти Аллу чтобы подписать аннекс"
     puts "В какой кабинет вы хотите пойти?(201, 402, 408)"
 	  
     print"> "
@@ -80,7 +83,7 @@
 	elsif choice == "408"
 	  nose_room
 	else 
-	  dead("Вы слишком долго бродили по кабинетам. Вас заметили и уволили")
+	  dead("Вы превысили время перерыва. Вас заметили и уволили")
 	end
     end
 	 
