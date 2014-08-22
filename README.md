@@ -1,4 +1,4 @@
-def gold_room
+    def gold_room
     puts "This room is full of gold. How much do you take?"
     print "> "
     
@@ -16,7 +16,7 @@ def gold_room
     else 
       dead("You greedy bastard!")
     end
-end
+    end
  
 def moustach_room
     puts "В комнате усатое чудовище."
