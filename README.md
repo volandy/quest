@@ -1,6 +1,5 @@
- def gold_room
+def gold_room
     puts "This room is full of gold. How much do you take?"
-  
     print "> "
     choice = $stdin.gets.chomp
   
@@ -17,7 +16,7 @@
     else 
       dead("You greedy bastard!")
     end
- end
+end
  
 def moustach_room
     puts "В комнате усатое чудовище."
